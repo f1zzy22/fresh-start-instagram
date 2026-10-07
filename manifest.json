@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Fresh Start for Instagram",
+  "version": "0.2.3",
+  "description": "Import your Instagram HTML exports and work through a reviewed block list locally.",
+  "minimum_chrome_version": "120",
+  "permissions": [
+    "storage",
+    "scripting",
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://www.instagram.com/*"
+  ],
+  "action": {
+    "default_title": "Open Fresh Start"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}

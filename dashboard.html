@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Fresh Start · Instagram</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="shell"><header class="top"><a class="brand" href="dashboard.html"><span class="mark">↗</span> fresh start<span class="beta">BETA</span></a><span class="local">● &nbsp;On your device. In your control.</span></header>
+<main><section class="intro"><p class="eyebrow">A LITTLE SPACE TO BE YOURSELF</p><h1>Your next chapter.<br><span>Your own audience.</span></h1><p class="subtitle">Bring your old Instagram connections. Choose who to block on your new account. Make room to create.</p></section>
+<div class="workspace"><section class="card setup"><div class="section-heading"><span class="step">01</span><h2>Bring your connections</h2></div>
+<label class="drop" id="drop"><span class="upload-icon">↥</span><strong>Drop Instagram HTML files here</strong><span>Followers, following, or both · .html</span><input id="files" type="file" accept=".html,.htm,text/html" multiple><span class="file-button">Choose files</span></label>
+<p id="importStatus" class="small">Only profile links are read. Your files never leave this device.</p>
+<div class="section-heading second"><span class="step">02</span><h2>Connect your new account</h2></div><p class="small">Open Instagram in this browser, sign in to your new account, and use the English desktop interface.</p>
+<label class="field">New account username<input id="account" placeholder="your_new_account" autocomplete="off" spellcheck="false"></label><button id="connect" class="secondary">Open Instagram & verify account ↗</button><p id="accountStatus" class="small" role="status" aria-live="polite">No account verified.</p>
+<label class="field">Seconds between profiles<input id="interval" type="number" min="10" max="600" step="1" value="30"></label>
+<p class="small">Choose 10–600 seconds. Chrome may delay the next profile if its background worker restarts. There is no guaranteed safe blocking rate. Instagram may restrict automated activity. Profiles with missing controls or uncertain results are flagged for review, then the run continues. Account restrictions and login issues pause the run.</p>
+<label class="confirm"><input type="checkbox" id="confirm">I reviewed the list and want to block these accounts from my verified new account.</label>
+<p id="startHint" class="small" aria-live="polite"></p><button id="start" class="primary" disabled>Start automatic blocking <span>↗</span></button><button id="pause" class="secondary" hidden>Pause run</button>
+<p id="runStatus" class="small" role="status" aria-live="polite"></p><p class="small">The run continues in the background when you switch tabs or close this dashboard. Keep Chrome and the Instagram tab open. Use Pause to stop; a click already sent may finish.</p>
+</section>
+<section class="card review"><div class="review-head"><div><p class="eyebrow">YOUR BLOCK LIST</p><h2>Make it yours.</h2></div><button id="clear" class="quiet">Clear data</button></div>
+<div class="stats"><div><strong id="total">0</strong><span>Imported</span></div><div><strong id="pending">0</strong><span>Queued</span></div><div><strong id="done">0</strong><span>Blocked</span></div><div><strong id="failed">0</strong><span>Needs review</span></div></div>
+<div class="progress"><div id="bar"></div></div><p id="status" role="status" aria-live="polite">Import your files to get started.</p>
+<div class="toolbar"><input id="search" type="search" placeholder="Search usernames" aria-label="Search usernames"><select id="filter" aria-label="Filter status"><option value="all">All accounts</option><option value="pending">Pending</option><option value="done">Blocked</option><option value="failed">Needs review</option></select></div>
+<div class="selection"><label><input id="selectAll" type="checkbox"> Select visible pending</label><button id="export" class="quiet">Export progress ↓</button></div>
+<div class="list" id="list"><div class="empty"><span>✳</span><h3>A fresh start begins here.</h3><p>Your imported connections will appear in this space.</p></div></div>
+<div class="pagination"><button id="previous" class="quiet">← Previous</button><span id="pageInfo">0 accounts</span><button id="next" class="quiet">Next →</button></div>
+</section></div><p class="footnote">Independent, open-source software. Not affiliated with Instagram or Meta. Blocking a list cannot guarantee that people won’t discover a public account.</p></main><footer><span>Fresh Start / v0.2.3</span><span>No passwords. No analytics. No server.</span></footer></div><script type="module" src="dashboard.js"></script></body></html>
